@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Habitica Time Ledger</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">⌛</span><div><h1>Time Ledger</h1><p>Habitica activity analytics</p></div></div>
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" title="Switch theme">☀</button>
+      <button id="syncBtn" class="icon-btn" title="Sync Habitica">↻</button>
+      <button id="settingsBtn" class="icon-btn" title="Settings">⚙</button>
+    </div>
+  </header>
+  <main id="app"><div class="loading">Loading…</div></main>
+  <footer><button id="dashboardBtn" class="ghost full">Open dashboard</button></footer>
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

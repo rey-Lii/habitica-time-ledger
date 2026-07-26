@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Time Ledger Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header>
+    <div class="brand"><span class="brand-mark">⌛</span><div><h1>Time Ledger Settings</h1><p>Configure each task once, then use Habitica normally.</p></div></div>
+    <div class="header-actions"><button id="themeBtn" class="icon">☀</button><button id="dashboardBtn" class="ghost">Dashboard</button></div>
+  </header>
+  <main>
+    <section class="card connection">
+      <div class="card-head"><div><h2>Habitica connection</h2><p>Your credentials stay in Chrome local storage.</p></div><span id="status"></span></div>
+      <div class="connection-grid"><div class="field"><label>User ID</label><input id="userId" autocomplete="off"></div><div class="field"><label>API Token</label><input id="apiToken" type="password" autocomplete="off"></div><div class="field wide"><label>X-Client</label><input id="clientId" autocomplete="off" placeholder="Generated automatically"></div></div>
+      <div class="button-row"><button id="saveSettings" class="ghost">Save connection</button><button id="sync" class="primary">Sync Habitica</button></div>
+    </section>
+
+    <section class="setup-stats" id="setupStats"></section>
+
+    <section class="card task-card">
+      <div class="card-head"><div><h2>Task setup</h2><p>Category, project and minutes per completion are remembered.</p></div><label class="check"><input id="applySimilar" type="checkbox"> Apply to similar names</label></div>
+      <div class="toolbar"><input id="taskSearch" placeholder="Search tasks or tags…"><select id="statusFilter"><option value="all">All tasks</option><option value="unassigned">Needs setup</option><option value="assigned">Configured</option></select></div>
+      <div class="table-head"><span>Task</span><span>Category</span><span>Project</span><span>Minutes</span><span></span></div>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+    <section class="card danger-zone"><div><h2>Activity data</h2><p>Remove captured completions without deleting task setup.</p></div><button id="clearActivities" class="danger">Clear activity history</button></section>
+  </main>
+  <script src="common.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

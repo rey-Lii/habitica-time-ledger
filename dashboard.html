@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Habitica Time Ledger</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">⌛</span><div><h1>Time Ledger</h1><p>Habitica completion analytics</p></div></div>
+    <div class="actions">
+      <button id="themeBtn" class="icon" title="Switch theme">☀</button>
+      <button id="syncBtn" class="ghost">Sync now</button>
+      <button id="settingsBtn" class="ghost">Settings</button>
+    </div>
+  </header>
+  <main>
+    <section class="date-nav">
+      <button id="prevDay" class="icon">‹</button>
+      <div><strong id="dateLabel"></strong><span id="accuracyLabel"></span></div>
+      <button id="nextDay" class="icon">›</button>
+    </section>
+
+    <section id="summary" class="summary-grid"></section>
+
+    <section class="insights-grid">
+      <article class="card timeline-card">
+        <div class="card-head"><div><h2>Activity timeline</h2><p>Time blocks ending at each Habitica completion</p></div><span id="overlapBadge" class="badge hidden"></span></div>
+        <div id="timeline" class="timeline"></div>
+      </article>
+
+      <article class="card breakdown-card">
+        <div class="card-head stacked"><div><h2 id="breakdownTitle">Category breakdown</h2><p>Ranked by activity time</p></div><div class="segmented"><button id="categoryTab" class="active">Categories</button><button id="projectTab">Projects</button></div></div>
+        <div id="breakdown" class="breakdown"></div>
+      </article>
+    </section>
+
+    <section class="card recent-card">
+      <div class="card-head"><div><h2>Recent activity</h2><p>Completion time, category and minutes per completion</p></div><span id="syncLabel" class="sync-label"></span></div>
+      <div id="activityList" class="activity-list"></div>
+    </section>
+  </main>
+  <div id="modal" class="modal-backdrop hidden"><div class="modal" id="modalCard"></div></div>
+  <script src="common.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
