@@ -4,8 +4,7 @@
 
 ![Habitica Time Ledger dashboard](screenshots/dashboard-light.png)
 
-> **Beta:** Habitica Time Ledger is currently distributed as a manually installed Chrome extension. A Chrome Web Store release is planned after broader testing.
-
+> **Beta:** Habitica Time Ledger is currently distributed as a manually installed Chrome extension. 
 ## What it does
 
 Habitica is excellent for completing tasks and building routines, but it does not show where your day went. Time Ledger adds that missing analytics layer while keeping Habitica as your only task interface.
